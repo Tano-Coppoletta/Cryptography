@@ -13,12 +13,13 @@ void handle_errors(){
 int main(){
     unsigned char random_string[MAX];
 
-    if(RAND_load_file('/dev/random',64) != 64) 
+    if(RAND_load_file("/dev/random",64) != 64) 
         handle_errors();
        
     if(RAND_bytes(random_string,MAX) != 1)
         handle_errors();
 
+    printf("sequence generated:\n");
     for(int i=0;i<MAX;i++)
         printf("%02x-",random_string[i]);
     printf("\n");
