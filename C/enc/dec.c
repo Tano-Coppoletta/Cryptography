@@ -6,7 +6,7 @@
 #define DECRYPT 0
 
 int main(){
-
+ssss
     EVP_CIPHER_CTX *ctx= EVP_CIPHER_CTX_new();
 
     unsigned char key[]="1234567890abcdef"; //ASCII
