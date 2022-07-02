@@ -30,7 +30,7 @@ int main(int argc, char *argv[]){
     EVP_MD_CTX *md;
 
     //good practice
-    //Load the human readable error strings for libcrypto
+    //Load the human reada ble error strings for libcrypto
     ERR_load_crypto_strings();
     //Load all digest and chiper algorithms
     OpenSSL_add_all_algorithms();
