@@ -53,7 +53,7 @@ int main(int argc,char* argv[]){
     }
 
     
-
+    //transform hex in bytes
     unsigned char key[strlen(argv[2])/2];
     for(int i=0;i< strlen(argv[2])/2; i++)
         sscanf(&argv[2][2*1],"%2hhx",&key[i]);
@@ -69,7 +69,7 @@ int main(int argc,char* argv[]){
     for(int i=0;i< strlen(argv[3])/2; i++)
         sscanf(&argv[3][2*1],"%2hhx",&iv[i]);
 
-
+    //transform hex in bytes
     if(! EVP_CipherInit(ctx, EVP_aes_128_cbc(), key, iv, ENCRYPT))
         handle_errors();
 
