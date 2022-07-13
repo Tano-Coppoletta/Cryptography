@@ -1,2 +1,2 @@
 HOST = 'localhost'
-PORT = 12346
+PORT = 12344
