@@ -12,8 +12,6 @@ if __name__ == '__main__':
 
     server = remote(HOST,PORT)
 
-
-
     username = b'a'*6
     original_cookie = pad(b'username='+username+b',admin=false',AES.block_size)
     print(original_cookie)
@@ -22,7 +20,6 @@ if __name__ == '__main__':
 
     server.send(username)
     encrypted_cookie = server.recv(1024)
-
 
     edt_encry_cookie=bytearray(encrypted_cookie)
 
